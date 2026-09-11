@@ -1,0 +1,84 @@
+{
+  "pouOffsets": {
+    "Calculate_err": {
+      "kind": "FUNCTION",
+      "startLine": 21,
+      "endLine": 28
+    },
+    "Engineering_Unit": {
+      "kind": "FUNCTION",
+      "startLine": 30,
+      "endLine": 38
+    },
+    "Limit_Value": {
+      "kind": "FUNCTION",
+      "startLine": 40,
+      "endLine": 54
+    },
+    "Scale_analog": {
+      "kind": "FUNCTION",
+      "startLine": 56,
+      "endLine": 66
+    },
+    "State_Transition": {
+      "kind": "FUNCTION",
+      "startLine": 68,
+      "endLine": 80
+    },
+    "FB_Motor": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 82,
+      "endLine": 103
+    },
+    "FB_Pump": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 105,
+      "endLine": 129
+    },
+    "FB_Valve": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 131,
+      "endLine": 152
+    },
+    "Alarm_Manager": {
+      "kind": "PROGRAM",
+      "startLine": 154,
+      "endLine": 399
+    },
+    "Analog_Manager": {
+      "kind": "PROGRAM",
+      "startLine": 401,
+      "endLine": 439
+    },
+    "Batch_Controller": {
+      "kind": "PROGRAM",
+      "startLine": 441,
+      "endLine": 628
+    },
+    "Conveyor_Controller": {
+      "kind": "PROGRAM",
+      "startLine": 630,
+      "endLine": 661
+    },
+    "Equipment_Controller": {
+      "kind": "PROGRAM",
+      "startLine": 663,
+      "endLine": 804
+    },
+    "HMI_Manager": {
+      "kind": "PROGRAM",
+      "startLine": 806,
+      "endLine": 808
+    },
+    "main": {
+      "kind": "PROGRAM",
+      "startLine": 810,
+      "endLine": 812
+    },
+    "Safety_Manager": {
+      "kind": "PROGRAM",
+      "startLine": 814,
+      "endLine": 822
+    }
+  }
+}

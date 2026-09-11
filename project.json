@@ -1,0 +1,657 @@
+{
+  "meta": {
+    "name": "BatchProcessingPlant",
+    "type": "plc-project"
+  },
+  "data": {
+    "dataTypes": [
+      {
+        "name": "E_MACHINE_STATE",
+        "derivation": "enumerated",
+        "initialValue": "",
+        "values": [
+          {
+            "description": "IDLE"
+          },
+          {
+            "description": "FILL_A"
+          },
+          {
+            "description": "FILL_B"
+          },
+          {
+            "description": "MIX"
+          },
+          {
+            "description": "DISCHARGE"
+          },
+          {
+            "description": "PACKAGING"
+          },
+          {
+            "description": "COMPLETE"
+          },
+          {
+            "description": "FAULT"
+          }
+        ]
+      },
+      {
+        "name": "ST_BATCH",
+        "derivation": "structure",
+        "variable": [
+          {
+            "name": "Batch_ID",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Ingredient_A",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Ingredient_B",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Target_Level",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Temperature_SP",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Mix_Time",
+            "type": {
+              "definition": "base-type",
+              "value": "TIME"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Packing_Time",
+            "type": {
+              "definition": "base-type",
+              "value": "TIME"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "ST_ALARM",
+        "derivation": "structure",
+        "variable": [
+          {
+            "name": "Active",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Acknowledged",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Latched",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Code",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "name": "Message",
+            "type": {
+              "definition": "base-type",
+              "value": "STRING"
+            },
+            "initialValue": {
+              "simpleValue": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "pous": [],
+    "configuration": {
+      "resource": {
+        "tasks": [
+          {
+            "name": "Safety_Task",
+            "triggering": "Cyclic",
+            "interval": "T#10ms",
+            "priority": 0
+          },
+          {
+            "name": "Control_Task",
+            "triggering": "Cyclic",
+            "interval": "T#50ms",
+            "priority": 1
+          },
+          {
+            "name": "Analog_Task",
+            "triggering": "Cyclic",
+            "interval": "T#100ms",
+            "priority": 2
+          },
+          {
+            "name": "Batch_Task",
+            "triggering": "Cyclic",
+            "interval": "T#250ms",
+            "priority": 3
+          },
+          {
+            "name": "Alarm_Task",
+            "triggering": "Cyclic",
+            "interval": "T#500ms",
+            "priority": 4
+          },
+          {
+            "name": "HMI_Task",
+            "triggering": "Cyclic",
+            "interval": "T#1s",
+            "priority": 5
+          }
+        ],
+        "instances": [
+          {
+            "name": "Safety_Manager",
+            "task": "Safety_Task",
+            "program": "Safety_Manager"
+          },
+          {
+            "name": "Conveyor_Controller",
+            "task": "Control_Task",
+            "program": "Conveyor_Controller"
+          },
+          {
+            "name": "Equipment_Controller",
+            "task": "Control_Task",
+            "program": "Equipment_Controller"
+          },
+          {
+            "name": "Analog_Manager",
+            "task": "Analog_Task",
+            "program": "Analog_Manager"
+          },
+          {
+            "name": "Batch_Controller",
+            "task": "Batch_Task",
+            "program": "Batch_Controller"
+          },
+          {
+            "name": "Alarm_Manager",
+            "task": "Alarm_Task",
+            "program": "Alarm_Manager"
+          },
+          {
+            "name": "HMI_Manager",
+            "task": "HMI_Task",
+            "program": "HMI_Manager"
+          }
+        ],
+        "globalVariables": [
+          {
+            "name": "E_Stop",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "Safety_OK",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "System_Reset",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "Conveyor_Start",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Conveyor_Stop",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "System_Reset",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "AUTO_REQUEST",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Level",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Temperature",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Pressure",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Weight",
+            "type": {
+              "definition": "base-type",
+              "value": "REAL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "Ingredient_A_Request",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Ingredient_B_Request",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Mixer_Request",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Discharge_Request",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Packaging_Request",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Conveyor_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Mixer_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Packaging_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Pump_A_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "Pump_B_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Discharge_Pump_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Inlet_Valve_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Ingredient_A_Valve_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Ingredient_B_Valve_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Discharge_Valve_Fault",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Conveyor_Jam",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Batch_State_Code",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "Alarm_Acknowledge",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "Batch",
+            "type": {
+              "definition": "user-data-type",
+              "value": "ST_BATCH"
+            },
+            "location": "",
+            "initialValue": "",
+            "documentation": "",
+            "debug": true
+          }
+        ]
+      }
+    },
+    "libraries": [],
+    "debugVariables": {
+      "global": [
+        "E_Stop",
+        "System_Reset",
+        "System_Reset",
+        "Weight",
+        "Pump_A_Fault",
+        "Batch_State_Code",
+        "Batch"
+      ],
+      "pous": {
+        "Alarm_Manager": [
+          "Pump_A_Fault",
+          "Batch",
+          "Batch_State_Code",
+          "System_Reset",
+          "Pump_A_Alarm"
+        ],
+        "Analog_Manager": [
+          "Weight"
+        ],
+        "Batch_Controller": [
+          "Weight",
+          "Batch_State_Code",
+          "Batch",
+          "Batch_Start",
+          "Batch_Stop",
+          "Batch_Reset",
+          "Discharge_Done",
+          "Packaging_Active",
+          "Packaging_Done"
+        ],
+        "Conveyor_Controller": [
+          "System_Reset"
+        ],
+        "Equipment_Controller": [
+          "System_Reset",
+          "Pump_A_Fault",
+          "Pump_A_Fault_In",
+          "Pump_A_Run"
+        ],
+        "Safety_Manager": [
+          "E_Stop",
+          "System_Reset"
+        ]
+      }
+    }
+  }
+}
