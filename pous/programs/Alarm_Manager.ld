@@ -23,6 +23,7 @@ PROGRAM Alarm_Manager
   VAR
     Safety_Alarm : ST_ALARM;
     Conveyor_Alarm : ST_ALARM;
+    Conveyor : FB_ALARM;
     Mixer_Alarm : ST_ALARM;
     Packaging_Alarm : ST_ALARM;
     Pump_A_Alarm : ST_ALARM;
@@ -36,6 +37,8 @@ PROGRAM Alarm_Manager
     Batch_Fault_Alarm : ST_ALARM;
     Temperature_Alarm : ST_ALARM;
     Any_Alarm : BOOL;
+    FB_ALARM0 : FB_Alarm;
+    FB_ALARM1 : FB_Alarm;
   END_VAR
 
 {
@@ -711,8 +714,8 @@ PROGRAM Alarm_Manager
         100
       ],
       "reactFlowViewport": [
-        441,
-        120
+        779,
+        254
       ],
       "nodes": [
         {
@@ -741,6 +744,42 @@ PROGRAM Alarm_Manager
                   "top": 20,
                   "right": -3
                 }
+              },
+              {
+                "glbPosition": {
+                  "x": 3,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Acknowledge",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "right": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 3,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 180
+                },
+                "id": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Alarm_Reset",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 180,
+                  "right": -3
+                }
               }
             ],
             "inputHandles": [],
@@ -760,6 +799,42 @@ PROGRAM Alarm_Manager
                 "isConnectable": false,
                 "style": {
                   "top": 20,
+                  "right": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 3,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Acknowledge",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "right": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 3,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 180
+                },
+                "id": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Alarm_Reset",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 180,
                   "right": -3
                 }
               }
@@ -950,18 +1025,344 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
-          "id": "COIL_3001f7f5-cdab-4d00-8ecb-f37b782c5b60",
-          "type": "coil",
+          "id": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "type": "block",
           "position": {
-            "x": 182,
-            "y": 38
+            "x": 257,
+            "y": 14
           },
           "data": {
             "handles": [
               {
                 "glbPosition": {
-                  "x": 182,
+                  "x": 257,
                   "y": 50
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 36
+                },
+                "id": "Fault_in",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 36,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 116
+                },
+                "id": "Acknowledge",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 196
+                },
+                "id": "Alarm_Reset",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 196,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 473,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 216,
+                  "y": 36
+                },
+                "id": "Active",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 36,
+                  "right": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 473,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 216,
+                  "y": 116
+                },
+                "id": "Latched",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "right": 0
+                }
+              }
+            ],
+            "inputHandles": [
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 36
+                },
+                "id": "Fault_in",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 36,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 116
+                },
+                "id": "Acknowledge",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 196
+                },
+                "id": "Alarm_Reset",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 196,
+                  "left": 0
+                }
+              }
+            ],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 473,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 216,
+                  "y": 36
+                },
+                "id": "Active",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 36,
+                  "right": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 473,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 216,
+                  "y": 116
+                },
+                "id": "Latched",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "right": 0
+                }
+              }
+            ],
+            "inputConnector": {
+              "glbPosition": {
+                "x": 257,
+                "y": 50
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 36
+              },
+              "id": "Fault_in",
+              "position": "left",
+              "type": "target",
+              "isConnectable": false,
+              "style": {
+                "top": 36,
+                "left": 0
+              }
+            },
+            "outputConnector": {
+              "glbPosition": {
+                "x": 473,
+                "y": 50
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 36
+              },
+              "id": "Active",
+              "position": "right",
+              "type": "source",
+              "isConnectable": false,
+              "style": {
+                "top": 36,
+                "right": 0
+              }
+            },
+            "numericId": "4275715",
+            "variant": {
+              "name": "FB_Alarm",
+              "type": "function-block",
+              "variables": [
+                {
+                  "name": "Fault_in",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Acknowledge",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Alarm_Reset",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Active",
+                  "class": "output",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Latched",
+                  "class": "output",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Acknowledged",
+                  "class": "local",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                }
+              ],
+              "documentation": "",
+              "extensible": false
+            },
+            "variable": {
+              "name": "Conveyor",
+              "class": "local",
+              "type": {
+                "definition": "derived",
+                "value": "FB_ALARM"
+              },
+              "location": "",
+              "initialValue": "",
+              "documentation": "",
+              "debug": false
+            },
+            "executionOrder": 0,
+            "executionControl": false,
+            "lockExecutionControl": false,
+            "connectedVariables": [
+              {
+                "handleId": "Latched",
+                "type": "output",
+                "variable": {
+                  "name": "Conveyor_Alarm.Latched"
+                }
+              }
+            ],
+            "draggable": true,
+            "selectable": true,
+            "deletable": true
+          },
+          "width": 216,
+          "height": 220,
+          "measured": {
+            "width": 216,
+            "height": 220
+          },
+          "draggable": true,
+          "selectable": true,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "CONTACT_4a1330bf-7b15-4b3b-a93b-c0c5a9c5c7d6",
+          "type": "contact",
+          "position": {
+            "x": 68,
+            "y": 118
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 68,
+                  "y": 130
                 },
                 "relPosition": {
                   "x": 0,
@@ -977,11 +1378,11 @@ PROGRAM Alarm_Manager
               },
               {
                 "glbPosition": {
-                  "x": 210,
-                  "y": 50
+                  "x": 92,
+                  "y": 130
                 },
                 "relPosition": {
-                  "x": 28,
+                  "x": 24,
                   "y": 12
                 },
                 "id": "output",
@@ -993,12 +1394,12 @@ PROGRAM Alarm_Manager
                 }
               }
             ],
-            "variant": "set",
+            "variant": "default",
             "inputHandles": [
               {
                 "glbPosition": {
-                  "x": 182,
-                  "y": 50
+                  "x": 68,
+                  "y": 130
                 },
                 "relPosition": {
                   "x": 0,
@@ -1016,11 +1417,11 @@ PROGRAM Alarm_Manager
             "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 210,
-                  "y": 50
+                  "x": 92,
+                  "y": 130
                 },
                 "relPosition": {
-                  "x": 28,
+                  "x": 24,
                   "y": 12
                 },
                 "id": "output",
@@ -1034,8 +1435,8 @@ PROGRAM Alarm_Manager
             ],
             "inputConnector": {
               "glbPosition": {
-                "x": 182,
-                "y": 50
+                "x": 68,
+                "y": 130
               },
               "relPosition": {
                 "x": 0,
@@ -1051,11 +1452,11 @@ PROGRAM Alarm_Manager
             },
             "outputConnector": {
               "glbPosition": {
-                "x": 210,
-                "y": 50
+                "x": 92,
+                "y": 130
               },
               "relPosition": {
-                "x": 28,
+                "x": 24,
                 "y": 12
               },
               "id": "output",
@@ -1066,10 +1467,10 @@ PROGRAM Alarm_Manager
                 "right": -3
               }
             },
-            "numericId": "4972472",
+            "numericId": "8844712",
             "variable": {
               "id": "",
-              "name": "Conveyor_Alarm.Active",
+              "name": "Alarm_Acknowledge",
               "type": {
                 "definition": "base-type",
                 "value": "BOOL"
@@ -1083,12 +1484,16 @@ PROGRAM Alarm_Manager
             "draggable": true,
             "selectable": true,
             "deletable": true,
-            "wrongVariable": true
+            "branchContext": {
+              "blockId": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+              "handleId": "Acknowledge",
+              "direction": "input"
+            }
           },
-          "width": 28,
+          "width": 24,
           "height": 24,
           "measured": {
-            "width": 28,
+            "width": 24,
             "height": 24
           },
           "draggable": true,
@@ -1097,17 +1502,168 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
-          "id": "COIL_99b8ea76-5d1a-4d82-895e-3a09ce277b4f",
+          "id": "CONTACT_02f29aab-fa1b-46f3-b50b-ce022e42a732",
+          "type": "contact",
+          "position": {
+            "x": 68,
+            "y": 198
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 68,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 92,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 24,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "variant": "default",
+            "inputHandles": [
+              {
+                "glbPosition": {
+                  "x": 68,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              }
+            ],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 92,
+                  "y": 210
+                },
+                "relPosition": {
+                  "x": 24,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "inputConnector": {
+              "glbPosition": {
+                "x": 68,
+                "y": 210
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 12
+              },
+              "id": "input",
+              "position": "left",
+              "isConnectable": false,
+              "type": "target",
+              "style": {
+                "left": -3
+              }
+            },
+            "outputConnector": {
+              "glbPosition": {
+                "x": 92,
+                "y": 210
+              },
+              "relPosition": {
+                "x": 24,
+                "y": 12
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source",
+              "style": {
+                "right": -3
+              }
+            },
+            "numericId": "6808035",
+            "variable": {
+              "id": "",
+              "name": "System_Reset",
+              "type": {
+                "definition": "base-type",
+                "value": "BOOL"
+              },
+              "class": "local",
+              "location": "",
+              "documentation": "",
+              "debug": false
+            },
+            "executionOrder": 0,
+            "draggable": true,
+            "selectable": true,
+            "deletable": true,
+            "branchContext": {
+              "blockId": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+              "handleId": "Alarm_Reset",
+              "direction": "input"
+            }
+          },
+          "width": 24,
+          "height": 24,
+          "measured": {
+            "width": 24,
+            "height": 24
+          },
+          "draggable": true,
+          "selectable": true,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "COIL_1d13b3b0-d454-4650-8936-4d6f08ffb1ce",
           "type": "coil",
           "position": {
-            "x": 300,
+            "x": 638,
             "y": 38
           },
           "data": {
             "handles": [
               {
                 "glbPosition": {
-                  "x": 300,
+                  "x": 638,
                   "y": 50
                 },
                 "relPosition": {
@@ -1124,7 +1680,7 @@ PROGRAM Alarm_Manager
               },
               {
                 "glbPosition": {
-                  "x": 328,
+                  "x": 666,
                   "y": 50
                 },
                 "relPosition": {
@@ -1140,11 +1696,11 @@ PROGRAM Alarm_Manager
                 }
               }
             ],
-            "variant": "set",
+            "variant": "default",
             "inputHandles": [
               {
                 "glbPosition": {
-                  "x": 300,
+                  "x": 638,
                   "y": 50
                 },
                 "relPosition": {
@@ -1163,7 +1719,7 @@ PROGRAM Alarm_Manager
             "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 328,
+                  "x": 666,
                   "y": 50
                 },
                 "relPosition": {
@@ -1181,7 +1737,7 @@ PROGRAM Alarm_Manager
             ],
             "inputConnector": {
               "glbPosition": {
-                "x": 300,
+                "x": 638,
                 "y": 50
               },
               "relPosition": {
@@ -1198,7 +1754,7 @@ PROGRAM Alarm_Manager
             },
             "outputConnector": {
               "glbPosition": {
-                "x": 328,
+                "x": 666,
                 "y": 50
               },
               "relPosition": {
@@ -1213,10 +1769,10 @@ PROGRAM Alarm_Manager
                 "right": -3
               }
             },
-            "numericId": "9671229",
+            "numericId": "9606379",
             "variable": {
               "id": "",
-              "name": "Conveyor_Alarm.Latched",
+              "name": "Conveyor_Alarm.Active",
               "type": {
                 "definition": "base-type",
                 "value": "BOOL"
@@ -1243,10 +1799,161 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
+          "id": "COIL_da85eb40-ba77-40fc-afd8-a8a8e18f158a",
+          "type": "coil",
+          "position": {
+            "x": 638,
+            "y": 118
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 638,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 666,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 28,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "variant": "default",
+            "inputHandles": [
+              {
+                "glbPosition": {
+                  "x": 638,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              }
+            ],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 666,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 28,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "inputConnector": {
+              "glbPosition": {
+                "x": 638,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 12
+              },
+              "id": "input",
+              "position": "left",
+              "isConnectable": false,
+              "type": "target",
+              "style": {
+                "left": -3
+              }
+            },
+            "outputConnector": {
+              "glbPosition": {
+                "x": 666,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 28,
+                "y": 12
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source",
+              "style": {
+                "right": -3
+              }
+            },
+            "numericId": "1651181",
+            "variable": {
+              "id": "",
+              "name": "Conveyor_Alarm.Latched",
+              "type": {
+                "definition": "base-type",
+                "value": "BOOL"
+              },
+              "class": "local",
+              "location": "",
+              "documentation": "",
+              "debug": false
+            },
+            "executionOrder": 0,
+            "draggable": true,
+            "selectable": true,
+            "deletable": true,
+            "branchContext": {
+              "blockId": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+              "handleId": "Latched",
+              "direction": "output"
+            }
+          },
+          "width": 28,
+          "height": 24,
+          "measured": {
+            "width": 28,
+            "height": 24
+          },
+          "draggable": true,
+          "selectable": true,
+          "selected": false,
+          "dragging": false
+        },
+        {
           "id": "right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
           "type": "powerRail",
           "position": {
-            "x": 438,
+            "x": 776,
             "y": 30
           },
           "data": {
@@ -1268,7 +1975,26 @@ PROGRAM Alarm_Manager
                   "top": 20,
                   "left": -3
                 },
-                "x": 438
+                "x": 776
+              },
+              {
+                "glbPosition": {
+                  "x": 297,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Latched",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "left": -3
+                },
+                "x": 776
               }
             ],
             "inputHandles": [
@@ -1287,6 +2013,25 @@ PROGRAM Alarm_Manager
                 "isConnectable": false,
                 "style": {
                   "top": 20,
+                  "left": -3
+                },
+                "x": 776
+              },
+              {
+                "glbPosition": {
+                  "x": 297,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Latched",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
                   "left": -3
                 }
               }
@@ -1341,29 +2086,96 @@ PROGRAM Alarm_Manager
           "targetHandle": "input"
         },
         {
-          "id": "e_CONTACT_c3a062db-10dc-4500-9fec-10368c00c08d_COIL_3001f7f5-cdab-4d00-8ecb-f37b782c5b60__output_input",
+          "id": "e_CONTACT_c3a062db-10dc-4500-9fec-10368c00c08d_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89__output_Fault_in",
           "source": "CONTACT_c3a062db-10dc-4500-9fec-10368c00c08d",
-          "target": "COIL_3001f7f5-cdab-4d00-8ecb-f37b782c5b60",
+          "target": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
           "sourceHandle": "output",
+          "targetHandle": "Fault_in"
+        },
+        {
+          "id": "e_left-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf_CONTACT_4a1330bf-7b15-4b3b-a93b-c0c5a9c5c7d6__branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Acknowledge_input",
+          "source": "left-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
+          "target": "CONTACT_4a1330bf-7b15-4b3b-a93b-c0c5a9c5c7d6",
+          "sourceHandle": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Acknowledge",
           "targetHandle": "input"
         },
         {
-          "id": "e_COIL_3001f7f5-cdab-4d00-8ecb-f37b782c5b60_COIL_99b8ea76-5d1a-4d82-895e-3a09ce277b4f__output_input",
-          "source": "COIL_3001f7f5-cdab-4d00-8ecb-f37b782c5b60",
-          "target": "COIL_99b8ea76-5d1a-4d82-895e-3a09ce277b4f",
+          "id": "e_CONTACT_4a1330bf-7b15-4b3b-a93b-c0c5a9c5c7d6_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89__output_Acknowledge",
+          "source": "CONTACT_4a1330bf-7b15-4b3b-a93b-c0c5a9c5c7d6",
+          "target": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
           "sourceHandle": "output",
+          "targetHandle": "Acknowledge"
+        },
+        {
+          "id": "e_left-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf_CONTACT_02f29aab-fa1b-46f3-b50b-ce022e42a732__branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Alarm_Reset_input",
+          "source": "left-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
+          "target": "CONTACT_02f29aab-fa1b-46f3-b50b-ce022e42a732",
+          "sourceHandle": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Alarm_Reset",
           "targetHandle": "input"
         },
         {
-          "id": "e_COIL_99b8ea76-5d1a-4d82-895e-3a09ce277b4f_right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf__output_right-rail",
-          "source": "COIL_99b8ea76-5d1a-4d82-895e-3a09ce277b4f",
+          "id": "e_CONTACT_02f29aab-fa1b-46f3-b50b-ce022e42a732_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89__output_Alarm_Reset",
+          "source": "CONTACT_02f29aab-fa1b-46f3-b50b-ce022e42a732",
+          "target": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "sourceHandle": "output",
+          "targetHandle": "Alarm_Reset"
+        },
+        {
+          "id": "e_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_COIL_1d13b3b0-d454-4650-8936-4d6f08ffb1ce__Active_input",
+          "source": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "target": "COIL_1d13b3b0-d454-4650-8936-4d6f08ffb1ce",
+          "sourceHandle": "Active",
+          "targetHandle": "input"
+        },
+        {
+          "id": "e_COIL_1d13b3b0-d454-4650-8936-4d6f08ffb1ce_right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf__output_right-rail",
+          "source": "COIL_1d13b3b0-d454-4650-8936-4d6f08ffb1ce",
           "target": "right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
           "sourceHandle": "output",
           "targetHandle": "right-rail"
+        },
+        {
+          "id": "e_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_COIL_da85eb40-ba77-40fc-afd8-a8a8e18f158a__Latched_input",
+          "source": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "target": "COIL_da85eb40-ba77-40fc-afd8-a8a8e18f158a",
+          "sourceHandle": "Latched",
+          "targetHandle": "input"
+        },
+        {
+          "id": "e_COIL_da85eb40-ba77-40fc-afd8-a8a8e18f158a_right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf__output_branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Latched",
+          "source": "COIL_da85eb40-ba77-40fc-afd8-a8a8e18f158a",
+          "target": "right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
+          "sourceHandle": "output",
+          "targetHandle": "branch_BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89_Latched"
         }
       ],
       "selectedNodes": [],
-      "handleBranches": []
+      "handleBranches": [
+        {
+          "blockId": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "handleId": "Acknowledge",
+          "direction": "input",
+          "nodeIds": [
+            "CONTACT_4a1330bf-7b15-4b3b-a93b-c0c5a9c5c7d6"
+          ]
+        },
+        {
+          "blockId": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "handleId": "Alarm_Reset",
+          "direction": "input",
+          "nodeIds": [
+            "CONTACT_02f29aab-fa1b-46f3-b50b-ce022e42a732"
+          ]
+        },
+        {
+          "blockId": "BLOCK_2b9489d8-2a80-4b4c-ad3f-45057a961f89",
+          "handleId": "Latched",
+          "direction": "output",
+          "nodeIds": [
+            "COIL_da85eb40-ba77-40fc-afd8-a8a8e18f158a"
+          ]
+        }
+      ]
     },
     {
       "id": "rung_Alarm_Manager_e00d3f45-58e3-4f89-a557-1d142929e521",
@@ -1373,8 +2185,8 @@ PROGRAM Alarm_Manager
         100
       ],
       "reactFlowViewport": [
-        441,
-        120
+        779,
+        214
       ],
       "selectedNodes": [],
       "nodes": [
@@ -1613,129 +2425,298 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
-          "id": "COIL_2bfbab8f-e5fc-4c5c-b7a1-0424eb87c98b",
-          "type": "coil",
+          "id": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+          "type": "block",
           "position": {
-            "x": 182,
-            "y": 38
+            "x": 257,
+            "y": 14
           },
           "data": {
             "handles": [
               {
                 "glbPosition": {
-                  "x": 182,
+                  "x": 257,
                   "y": 50
                 },
                 "relPosition": {
                   "x": 0,
-                  "y": 12
+                  "y": 36
                 },
-                "id": "input",
+                "id": "Fault_in",
                 "position": "left",
-                "isConnectable": false,
                 "type": "target",
+                "isConnectable": false,
                 "style": {
-                  "left": -3
+                  "top": 36,
+                  "left": 0
                 }
               },
               {
                 "glbPosition": {
-                  "x": 210,
+                  "x": 257,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 116
+                },
+                "id": "Acknowledge",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 156
+                },
+                "id": "Alarm_Reset",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 156,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 473,
                   "y": 50
                 },
                 "relPosition": {
-                  "x": 28,
-                  "y": 12
+                  "x": 216,
+                  "y": 36
                 },
-                "id": "output",
+                "id": "Active",
                 "position": "right",
-                "isConnectable": false,
                 "type": "source",
+                "isConnectable": false,
                 "style": {
-                  "right": -3
+                  "top": 36,
+                  "right": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 473,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 216,
+                  "y": 116
+                },
+                "id": "Latched",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "right": 0
                 }
               }
             ],
-            "variant": "set",
             "inputHandles": [
               {
                 "glbPosition": {
-                  "x": 182,
+                  "x": 257,
                   "y": 50
                 },
                 "relPosition": {
                   "x": 0,
-                  "y": 12
+                  "y": 36
                 },
-                "id": "input",
+                "id": "Fault_in",
                 "position": "left",
-                "isConnectable": false,
                 "type": "target",
+                "isConnectable": false,
                 "style": {
-                  "left": -3
+                  "top": 36,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 116
+                },
+                "id": "Acknowledge",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 257,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 156
+                },
+                "id": "Alarm_Reset",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 156,
+                  "left": 0
                 }
               }
             ],
             "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 210,
+                  "x": 473,
                   "y": 50
                 },
                 "relPosition": {
-                  "x": 28,
-                  "y": 12
+                  "x": 216,
+                  "y": 36
                 },
-                "id": "output",
+                "id": "Active",
                 "position": "right",
-                "isConnectable": false,
                 "type": "source",
+                "isConnectable": false,
                 "style": {
-                  "right": -3
+                  "top": 36,
+                  "right": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 473,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 216,
+                  "y": 116
+                },
+                "id": "Latched",
+                "position": "right",
+                "type": "source",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "right": 0
                 }
               }
             ],
             "inputConnector": {
               "glbPosition": {
-                "x": 182,
+                "x": 257,
                 "y": 50
               },
               "relPosition": {
                 "x": 0,
-                "y": 12
+                "y": 36
               },
-              "id": "input",
+              "id": "Fault_in",
               "position": "left",
-              "isConnectable": false,
               "type": "target",
+              "isConnectable": false,
               "style": {
-                "left": -3
+                "top": 36,
+                "left": 0
               }
             },
             "outputConnector": {
               "glbPosition": {
-                "x": 210,
+                "x": 473,
                 "y": 50
               },
               "relPosition": {
-                "x": 28,
-                "y": 12
+                "x": 216,
+                "y": 36
               },
-              "id": "output",
+              "id": "Active",
               "position": "right",
-              "isConnectable": false,
               "type": "source",
+              "isConnectable": false,
               "style": {
-                "right": -3
+                "top": 36,
+                "right": 0
               }
             },
-            "numericId": "4709569",
+            "numericId": "9900925",
+            "variant": {
+              "name": "FB_Alarm",
+              "type": "function-block",
+              "variables": [
+                {
+                  "name": "Fault_in",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Acknowledge",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Alarm_Reset",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Active",
+                  "class": "output",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Latched",
+                  "class": "output",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                },
+                {
+                  "name": "Acknowledged",
+                  "class": "local",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "BOOL"
+                  }
+                }
+              ],
+              "documentation": "",
+              "extensible": false
+            },
             "variable": {
-              "id": "",
-              "name": "Packaging_Alarm.Active",
+              "id": "c16c0dac-12dc-4514-8c64-52754b67bce9",
+              "name": "FB_ALARM1",
               "type": {
-                "definition": "base-type",
-                "value": "BOOL"
+                "definition": "derived",
+                "value": "FB_Alarm"
               },
               "class": "local",
               "location": "",
@@ -1743,16 +2724,18 @@ PROGRAM Alarm_Manager
               "debug": false
             },
             "executionOrder": 0,
+            "executionControl": false,
+            "lockExecutionControl": false,
+            "connectedVariables": [],
             "draggable": true,
             "selectable": true,
-            "deletable": true,
-            "wrongVariable": true
+            "deletable": true
           },
-          "width": 28,
-          "height": 24,
+          "width": 216,
+          "height": 180,
           "measured": {
-            "width": 28,
-            "height": 24
+            "width": 216,
+            "height": 180
           },
           "draggable": true,
           "selectable": true,
@@ -1760,17 +2743,17 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
-          "id": "COIL_4bd276c5-7471-4dcd-814c-ae98390a4a4b",
+          "id": "COIL_67d2c6da-c771-4f24-97c2-90c9c67c3fac",
           "type": "coil",
           "position": {
-            "x": 300,
+            "x": 638,
             "y": 38
           },
           "data": {
             "handles": [
               {
                 "glbPosition": {
-                  "x": 300,
+                  "x": 638,
                   "y": 50
                 },
                 "relPosition": {
@@ -1787,7 +2770,7 @@ PROGRAM Alarm_Manager
               },
               {
                 "glbPosition": {
-                  "x": 328,
+                  "x": 666,
                   "y": 50
                 },
                 "relPosition": {
@@ -1803,11 +2786,11 @@ PROGRAM Alarm_Manager
                 }
               }
             ],
-            "variant": "set",
+            "variant": "default",
             "inputHandles": [
               {
                 "glbPosition": {
-                  "x": 300,
+                  "x": 638,
                   "y": 50
                 },
                 "relPosition": {
@@ -1826,7 +2809,7 @@ PROGRAM Alarm_Manager
             "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 328,
+                  "x": 666,
                   "y": 50
                 },
                 "relPosition": {
@@ -1844,7 +2827,7 @@ PROGRAM Alarm_Manager
             ],
             "inputConnector": {
               "glbPosition": {
-                "x": 300,
+                "x": 638,
                 "y": 50
               },
               "relPosition": {
@@ -1861,7 +2844,7 @@ PROGRAM Alarm_Manager
             },
             "outputConnector": {
               "glbPosition": {
-                "x": 328,
+                "x": 666,
                 "y": 50
               },
               "relPosition": {
@@ -1876,10 +2859,10 @@ PROGRAM Alarm_Manager
                 "right": -3
               }
             },
-            "numericId": "2988548",
+            "numericId": "1350618",
             "variable": {
               "id": "",
-              "name": "Packaging_Alarm.Latched",
+              "name": "Packaging_Alarm.Active",
               "type": {
                 "definition": "base-type",
                 "value": "BOOL"
@@ -1906,10 +2889,161 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
+          "id": "COIL_6305b042-5f4f-4ccf-82f9-f3c21cb4fef3",
+          "type": "coil",
+          "position": {
+            "x": 638,
+            "y": 118
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 638,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 666,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 28,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "variant": "default",
+            "inputHandles": [
+              {
+                "glbPosition": {
+                  "x": 638,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              }
+            ],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 666,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 28,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "inputConnector": {
+              "glbPosition": {
+                "x": 638,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 12
+              },
+              "id": "input",
+              "position": "left",
+              "isConnectable": false,
+              "type": "target",
+              "style": {
+                "left": -3
+              }
+            },
+            "outputConnector": {
+              "glbPosition": {
+                "x": 666,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 28,
+                "y": 12
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source",
+              "style": {
+                "right": -3
+              }
+            },
+            "numericId": "9305856",
+            "variable": {
+              "id": "",
+              "name": "Packaging_Alarm.Latched",
+              "type": {
+                "definition": "base-type",
+                "value": "BOOL"
+              },
+              "class": "local",
+              "location": "",
+              "documentation": "",
+              "debug": false
+            },
+            "executionOrder": 0,
+            "draggable": true,
+            "selectable": true,
+            "deletable": true,
+            "branchContext": {
+              "blockId": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+              "handleId": "Latched",
+              "direction": "output"
+            }
+          },
+          "width": 28,
+          "height": 24,
+          "measured": {
+            "width": 28,
+            "height": 24
+          },
+          "draggable": true,
+          "selectable": true,
+          "selected": false,
+          "dragging": false
+        },
+        {
           "id": "right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
           "type": "powerRail",
           "position": {
-            "x": 438,
+            "x": 776,
             "y": 30
           },
           "data": {
@@ -1931,7 +3065,26 @@ PROGRAM Alarm_Manager
                   "top": 20,
                   "left": -3
                 },
-                "x": 438
+                "x": 776
+              },
+              {
+                "glbPosition": {
+                  "x": 297,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265_Latched",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "left": -3
+                },
+                "x": 776
               }
             ],
             "inputHandles": [
@@ -1952,7 +3105,25 @@ PROGRAM Alarm_Manager
                   "top": 20,
                   "left": -3
                 },
-                "x": 320
+                "x": 776
+              },
+              {
+                "glbPosition": {
+                  "x": 297,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265_Latched",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "left": -3
+                }
               }
             ],
             "outputHandles": [],
@@ -1994,6 +3165,184 @@ PROGRAM Alarm_Manager
           "selectable": false,
           "selected": false,
           "dragging": false
+        },
+        {
+          "id": "VARIABLE_c1d638b3-1044-4ab7-a6b6-856f47ce9415",
+          "type": "variable",
+          "position": {
+            "x": 147,
+            "y": 114
+          },
+          "width": 80,
+          "height": 32,
+          "measured": {
+            "width": 80,
+            "height": 32
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 307,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "inputHandles": [],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 307,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "outputConnector": {
+              "glbPosition": {
+                "x": 307,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 80,
+                "y": 16
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source"
+            },
+            "numericId": "10751743",
+            "variable": {
+              "name": ""
+            },
+            "executionOrder": 0,
+            "variant": "input",
+            "block": {
+              "id": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+              "handleId": "Acknowledge",
+              "variableType": {
+                "name": "Acknowledge",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            },
+            "draggable": false,
+            "selectable": true,
+            "deletable": false
+          },
+          "deletable": false,
+          "selectable": true,
+          "draggable": false,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "VARIABLE_380fdae4-450d-4e4a-9040-4a9abfe4ca52",
+          "type": "variable",
+          "position": {
+            "x": 147,
+            "y": 154
+          },
+          "width": 80,
+          "height": 32,
+          "measured": {
+            "width": 80,
+            "height": 32
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 307,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "inputHandles": [],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 307,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "outputConnector": {
+              "glbPosition": {
+                "x": 307,
+                "y": 170
+              },
+              "relPosition": {
+                "x": 80,
+                "y": 16
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source"
+            },
+            "numericId": "9748883",
+            "variable": {
+              "name": ""
+            },
+            "executionOrder": 0,
+            "variant": "input",
+            "block": {
+              "id": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+              "handleId": "Alarm_Reset",
+              "variableType": {
+                "name": "Alarm_Reset",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            },
+            "draggable": false,
+            "selectable": true,
+            "deletable": false
+          },
+          "deletable": false,
+          "selectable": true,
+          "draggable": false,
+          "selected": false,
+          "dragging": false
         }
       ],
       "edges": [
@@ -2005,28 +3354,65 @@ PROGRAM Alarm_Manager
           "targetHandle": "input"
         },
         {
-          "id": "e_CONTACT_bcff7107-ac10-426d-b271-c7ee45e5bd06_COIL_2bfbab8f-e5fc-4c5c-b7a1-0424eb87c98b__output_input",
+          "id": "e_CONTACT_bcff7107-ac10-426d-b271-c7ee45e5bd06_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265__output_Fault_in",
           "source": "CONTACT_bcff7107-ac10-426d-b271-c7ee45e5bd06",
-          "target": "COIL_2bfbab8f-e5fc-4c5c-b7a1-0424eb87c98b",
+          "target": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
           "sourceHandle": "output",
+          "targetHandle": "Fault_in"
+        },
+        {
+          "id": "e_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265_COIL_67d2c6da-c771-4f24-97c2-90c9c67c3fac__Active_input",
+          "source": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+          "target": "COIL_67d2c6da-c771-4f24-97c2-90c9c67c3fac",
+          "sourceHandle": "Active",
           "targetHandle": "input"
         },
         {
-          "id": "e_COIL_2bfbab8f-e5fc-4c5c-b7a1-0424eb87c98b_COIL_4bd276c5-7471-4dcd-814c-ae98390a4a4b__output_input",
-          "source": "COIL_2bfbab8f-e5fc-4c5c-b7a1-0424eb87c98b",
-          "target": "COIL_4bd276c5-7471-4dcd-814c-ae98390a4a4b",
-          "sourceHandle": "output",
-          "targetHandle": "input"
-        },
-        {
-          "id": "e_COIL_4bd276c5-7471-4dcd-814c-ae98390a4a4b_right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf__output_right-rail",
-          "source": "COIL_4bd276c5-7471-4dcd-814c-ae98390a4a4b",
+          "id": "e_COIL_67d2c6da-c771-4f24-97c2-90c9c67c3fac_right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf__output_right-rail",
+          "source": "COIL_67d2c6da-c771-4f24-97c2-90c9c67c3fac",
           "target": "right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
           "sourceHandle": "output",
           "targetHandle": "right-rail"
+        },
+        {
+          "id": "e_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265_COIL_6305b042-5f4f-4ccf-82f9-f3c21cb4fef3__Latched_input",
+          "source": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+          "target": "COIL_6305b042-5f4f-4ccf-82f9-f3c21cb4fef3",
+          "sourceHandle": "Latched",
+          "targetHandle": "input"
+        },
+        {
+          "id": "e_COIL_6305b042-5f4f-4ccf-82f9-f3c21cb4fef3_right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf__output_branch_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265_Latched",
+          "source": "COIL_6305b042-5f4f-4ccf-82f9-f3c21cb4fef3",
+          "target": "right-rail-rung_Alarm_Manager_3a423efc-f0b2-4413-a06e-9e723005c0cf",
+          "sourceHandle": "output",
+          "targetHandle": "branch_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265_Latched"
+        },
+        {
+          "id": "e_VARIABLE_c1d638b3-1044-4ab7-a6b6-856f47ce9415_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265__output_Acknowledge",
+          "source": "VARIABLE_c1d638b3-1044-4ab7-a6b6-856f47ce9415",
+          "target": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+          "sourceHandle": "output",
+          "targetHandle": "Acknowledge"
+        },
+        {
+          "id": "e_VARIABLE_380fdae4-450d-4e4a-9040-4a9abfe4ca52_BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265__output_Alarm_Reset",
+          "source": "VARIABLE_380fdae4-450d-4e4a-9040-4a9abfe4ca52",
+          "target": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+          "sourceHandle": "output",
+          "targetHandle": "Alarm_Reset"
         }
       ],
-      "handleBranches": []
+      "handleBranches": [
+        {
+          "blockId": "BLOCK_720a9b0c-5b89-44f7-b1f3-3c0c89d33265",
+          "handleId": "Latched",
+          "direction": "output",
+          "nodeIds": [
+            "COIL_6305b042-5f4f-4ccf-82f9-f3c21cb4fef3"
+          ]
+        }
+      ]
     },
     {
       "id": "rung_Alarm_Manager_f450ea66-da82-4d29-8d53-86761ca0c7fb",
