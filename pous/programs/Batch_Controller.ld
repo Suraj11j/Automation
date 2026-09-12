@@ -38,19 +38,19 @@ PROGRAM Batch_Controller
   "name": "Batch_Controller",
   "rungs": [
     {
-      "id": "rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb",
-      "comment": "Initailize",
+      "id": "rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
+      "comment": "Batch Reset Initailize",
       "defaultBounds": [
         300,
         100
       ],
       "reactFlowViewport": [
-        598,
-        134
+        850,
+        214
       ],
       "nodes": [
         {
-          "id": "left-rail-rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb",
+          "id": "left-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
           "type": "powerRail",
           "position": {
             "x": 0,
@@ -116,7 +116,7 @@ PROGRAM Batch_Controller
                 "right": -3
               }
             },
-            "numericId": "4028091",
+            "numericId": "4358215",
             "variant": "left",
             "variable": {
               "name": ""
@@ -138,7 +138,7 @@ PROGRAM Batch_Controller
           "dragging": false
         },
         {
-          "id": "CONTACT_54e0c373-18e2-4514-ad6a-0a0dfdeb10d7",
+          "id": "CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd",
           "type": "contact",
           "position": {
             "x": 68,
@@ -254,7 +254,7 @@ PROGRAM Batch_Controller
                 "right": -3
               }
             },
-            "numericId": "4861542",
+            "numericId": "6442263",
             "variable": {
               "id": "",
               "name": "Batch_Reset",
@@ -284,17 +284,163 @@ PROGRAM Batch_Controller
           "dragging": false
         },
         {
-          "id": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
+          "id": "CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4",
+          "type": "contact",
+          "position": {
+            "x": 182,
+            "y": 38
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 182,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 206,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 24,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "variant": "default",
+            "inputHandles": [
+              {
+                "glbPosition": {
+                  "x": 182,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              }
+            ],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 206,
+                  "y": 50
+                },
+                "relPosition": {
+                  "x": 24,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "inputConnector": {
+              "glbPosition": {
+                "x": 182,
+                "y": 50
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 12
+              },
+              "id": "input",
+              "position": "left",
+              "isConnectable": false,
+              "type": "target",
+              "style": {
+                "left": -3
+              }
+            },
+            "outputConnector": {
+              "glbPosition": {
+                "x": 206,
+                "y": 50
+              },
+              "relPosition": {
+                "x": 24,
+                "y": 12
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source",
+              "style": {
+                "right": -3
+              }
+            },
+            "numericId": "1849988",
+            "variable": {
+              "id": "",
+              "name": "Safety_OK",
+              "type": {
+                "definition": "base-type",
+                "value": "BOOL"
+              },
+              "class": "local",
+              "location": "",
+              "documentation": "",
+              "debug": false
+            },
+            "executionOrder": 0,
+            "draggable": true,
+            "selectable": true,
+            "deletable": true
+          },
+          "width": 24,
+          "height": 24,
+          "measured": {
+            "width": 24,
+            "height": 24
+          },
+          "draggable": true,
+          "selectable": true,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
           "type": "block",
           "position": {
-            "x": 257,
+            "x": 371,
             "y": 14
           },
           "data": {
             "handles": [
               {
                 "glbPosition": {
-                  "x": 257,
+                  "x": 371,
                   "y": 50
                 },
                 "relPosition": {
@@ -312,14 +458,14 @@ PROGRAM Batch_Controller
               },
               {
                 "glbPosition": {
-                  "x": 257,
+                  "x": 371,
                   "y": 90
                 },
                 "relPosition": {
                   "x": 0,
                   "y": 76
                 },
-                "id": "IN",
+                "id": "Current_State",
                 "position": "left",
                 "type": "target",
                 "isConnectable": false,
@@ -330,11 +476,47 @@ PROGRAM Batch_Controller
               },
               {
                 "glbPosition": {
-                  "x": 335,
+                  "x": 371,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 116
+                },
+                "id": "Required_State",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 371,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 156
+                },
+                "id": "Next_State",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 156,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 587,
                   "y": 50
                 },
                 "relPosition": {
-                  "x": 78,
+                  "x": 216,
                   "y": 36
                 },
                 "id": "ENO",
@@ -348,11 +530,11 @@ PROGRAM Batch_Controller
               },
               {
                 "glbPosition": {
-                  "x": 335,
+                  "x": 587,
                   "y": 90
                 },
                 "relPosition": {
-                  "x": 78,
+                  "x": 216,
                   "y": 76
                 },
                 "id": "OUT",
@@ -368,7 +550,7 @@ PROGRAM Batch_Controller
             "inputHandles": [
               {
                 "glbPosition": {
-                  "x": 257,
+                  "x": 371,
                   "y": 50
                 },
                 "relPosition": {
@@ -386,14 +568,14 @@ PROGRAM Batch_Controller
               },
               {
                 "glbPosition": {
-                  "x": 257,
+                  "x": 371,
                   "y": 90
                 },
                 "relPosition": {
                   "x": 0,
                   "y": 76
                 },
-                "id": "IN",
+                "id": "Current_State",
                 "position": "left",
                 "type": "target",
                 "isConnectable": false,
@@ -401,16 +583,52 @@ PROGRAM Batch_Controller
                   "top": 76,
                   "left": 0
                 }
+              },
+              {
+                "glbPosition": {
+                  "x": 371,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 116
+                },
+                "id": "Required_State",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 371,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 156
+                },
+                "id": "Next_State",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 156,
+                  "left": 0
+                }
               }
             ],
             "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 335,
+                  "x": 587,
                   "y": 50
                 },
                 "relPosition": {
-                  "x": 78,
+                  "x": 216,
                   "y": 36
                 },
                 "id": "ENO",
@@ -424,11 +642,11 @@ PROGRAM Batch_Controller
               },
               {
                 "glbPosition": {
-                  "x": 335,
+                  "x": 587,
                   "y": 90
                 },
                 "relPosition": {
-                  "x": 78,
+                  "x": 216,
                   "y": 76
                 },
                 "id": "OUT",
@@ -443,7 +661,7 @@ PROGRAM Batch_Controller
             ],
             "inputConnector": {
               "glbPosition": {
-                "x": 257,
+                "x": 371,
                 "y": 50
               },
               "relPosition": {
@@ -461,11 +679,11 @@ PROGRAM Batch_Controller
             },
             "outputConnector": {
               "glbPosition": {
-                "x": 335,
+                "x": 587,
                 "y": 50
               },
               "relPosition": {
-                "x": 78,
+                "x": 216,
                 "y": 36
               },
               "id": "ENO",
@@ -477,11 +695,10 @@ PROGRAM Batch_Controller
                 "right": 0
               }
             },
-            "numericId": "1880909",
+            "numericId": "9564944",
             "variant": {
-              "name": "MOVE",
+              "name": "State_Transition",
               "type": "function",
-              "language": "st",
               "variables": [
                 {
                   "name": "EN",
@@ -503,31 +720,75 @@ PROGRAM Batch_Controller
                   "name": "OUT",
                   "class": "output",
                   "type": {
-                    "definition": "generic-type",
-                    "value": "ANY"
+                    "definition": "base-type",
+                    "value": "INT"
                   }
                 },
                 {
-                  "name": "IN",
+                  "name": "Current_State",
                   "class": "input",
                   "type": {
-                    "definition": "generic-type",
-                    "value": "ANY"
+                    "definition": "base-type",
+                    "value": "INT"
+                  }
+                },
+                {
+                  "name": "Required_State",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "INT"
+                  }
+                },
+                {
+                  "name": "Next_State",
+                  "class": "input",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "INT"
                   }
                 }
               ],
-              "body": "",
               "documentation": "",
-              "extensible": false,
-              "category": "Selection"
+              "extensible": false
             },
             "variable": {
               "name": ""
             },
             "executionOrder": 0,
             "executionControl": true,
-            "lockExecutionControl": false,
+            "lockExecutionControl": true,
             "connectedVariables": [
+              {
+                "handleId": "Current_State",
+                "type": "input",
+                "variable": {
+                  "name": "Batch_State_Code",
+                  "class": "local",
+                  "type": {
+                    "definition": "base-type",
+                    "value": "INT"
+                  },
+                  "location": "",
+                  "initialValue": null,
+                  "documentation": "",
+                  "debug": false
+                }
+              },
+              {
+                "handleId": "Required_State",
+                "type": "input",
+                "variable": {
+                  "name": "6"
+                }
+              },
+              {
+                "handleId": "Next_State",
+                "type": "input",
+                "variable": {
+                  "name": "0"
+                }
+              },
               {
                 "handleId": "OUT",
                 "type": "output",
@@ -543,24 +804,17 @@ PROGRAM Batch_Controller
                   "documentation": "",
                   "debug": false
                 }
-              },
-              {
-                "handleId": "IN",
-                "type": "input",
-                "variable": {
-                  "name": "0"
-                }
               }
             ],
             "draggable": true,
             "selectable": true,
             "deletable": true
           },
-          "width": 78,
-          "height": 100,
+          "width": 216,
+          "height": 180,
           "measured": {
-            "width": 78,
-            "height": 100
+            "width": 216,
+            "height": 180
           },
           "draggable": true,
           "selectable": true,
@@ -568,10 +822,10 @@ PROGRAM Batch_Controller
           "dragging": false
         },
         {
-          "id": "right-rail-rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb",
+          "id": "right-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
           "type": "powerRail",
           "position": {
-            "x": 595,
+            "x": 847,
             "y": 30
           },
           "data": {
@@ -593,7 +847,7 @@ PROGRAM Batch_Controller
                   "top": 20,
                   "left": -3
                 },
-                "x": 595
+                "x": 847
               }
             ],
             "inputHandles": [
@@ -635,7 +889,7 @@ PROGRAM Batch_Controller
                 "left": -3
               }
             },
-            "numericId": "1287434",
+            "numericId": "9211609",
             "variant": "right",
             "variable": {
               "name": ""
@@ -657,10 +911,10 @@ PROGRAM Batch_Controller
           "dragging": false
         },
         {
-          "id": "VARIABLE_9e987c8d-1ac4-44f2-8d46-60b756cbf452",
+          "id": "VARIABLE_a65e1726-75d3-479e-87da-f26a874d4a7c",
           "type": "variable",
           "position": {
-            "x": 147,
+            "x": 261,
             "y": 74
           },
           "width": 80,
@@ -673,7 +927,7 @@ PROGRAM Batch_Controller
             "handles": [
               {
                 "glbPosition": {
-                  "x": 307,
+                  "x": 421,
                   "y": 90
                 },
                 "relPosition": {
@@ -690,7 +944,7 @@ PROGRAM Batch_Controller
             "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 307,
+                  "x": 421,
                   "y": 90
                 },
                 "relPosition": {
@@ -705,7 +959,7 @@ PROGRAM Batch_Controller
             ],
             "outputConnector": {
               "glbPosition": {
-                "x": 307,
+                "x": 421,
                 "y": 90
               },
               "relPosition": {
@@ -717,21 +971,30 @@ PROGRAM Batch_Controller
               "isConnectable": false,
               "type": "source"
             },
-            "numericId": "9313425",
+            "numericId": "7313437",
             "variable": {
-              "name": "0"
+              "name": "Batch_State_Code",
+              "class": "local",
+              "type": {
+                "definition": "base-type",
+                "value": "INT"
+              },
+              "location": "",
+              "initialValue": null,
+              "documentation": "",
+              "debug": false
             },
             "executionOrder": 0,
             "variant": "input",
             "block": {
-              "id": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
-              "handleId": "IN",
+              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+              "handleId": "Current_State",
               "variableType": {
-                "name": "IN",
+                "name": "Current_State",
                 "class": "input",
                 "type": {
-                  "definition": "generic-type",
-                  "value": "ANY"
+                  "definition": "base-type",
+                  "value": "INT"
                 }
               }
             },
@@ -746,10 +1009,188 @@ PROGRAM Batch_Controller
           "dragging": false
         },
         {
-          "id": "VARIABLE_cb214320-46a7-440e-9245-b00f5bc94711",
+          "id": "VARIABLE_feb588bf-8c6c-4445-b750-bdefaaf587b5",
           "type": "variable",
           "position": {
-            "x": 365,
+            "x": 261,
+            "y": 114
+          },
+          "width": 80,
+          "height": 32,
+          "measured": {
+            "width": 80,
+            "height": 32
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 421,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "inputHandles": [],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 421,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "outputConnector": {
+              "glbPosition": {
+                "x": 421,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 80,
+                "y": 16
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source"
+            },
+            "numericId": "7660962",
+            "variable": {
+              "name": "6"
+            },
+            "executionOrder": 0,
+            "variant": "input",
+            "block": {
+              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+              "handleId": "Required_State",
+              "variableType": {
+                "name": "Required_State",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "INT"
+                }
+              }
+            },
+            "draggable": false,
+            "selectable": true,
+            "deletable": false
+          },
+          "deletable": false,
+          "selectable": true,
+          "draggable": false,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "VARIABLE_b9b44e15-0d4a-4c85-810d-0aef77fd4cad",
+          "type": "variable",
+          "position": {
+            "x": 261,
+            "y": 154
+          },
+          "width": 80,
+          "height": 32,
+          "measured": {
+            "width": 80,
+            "height": 32
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 421,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "inputHandles": [],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 421,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 80,
+                  "y": 16
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source"
+              }
+            ],
+            "outputConnector": {
+              "glbPosition": {
+                "x": 421,
+                "y": 170
+              },
+              "relPosition": {
+                "x": 80,
+                "y": 16
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source"
+            },
+            "numericId": "8839569",
+            "variable": {
+              "name": "0"
+            },
+            "executionOrder": 0,
+            "variant": "input",
+            "block": {
+              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+              "handleId": "Next_State",
+              "variableType": {
+                "name": "Next_State",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "INT"
+                }
+              }
+            },
+            "draggable": false,
+            "selectable": true,
+            "deletable": false
+          },
+          "deletable": false,
+          "selectable": true,
+          "draggable": false,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "VARIABLE_25dcc704-ffb9-4b46-9251-97b6f61dc3b8",
+          "type": "variable",
+          "position": {
+            "x": 617,
             "y": 74
           },
           "width": 80,
@@ -762,7 +1203,7 @@ PROGRAM Batch_Controller
             "handles": [
               {
                 "glbPosition": {
-                  "x": 365,
+                  "x": 617,
                   "y": 90
                 },
                 "relPosition": {
@@ -778,7 +1219,7 @@ PROGRAM Batch_Controller
             "inputHandles": [
               {
                 "glbPosition": {
-                  "x": 365,
+                  "x": 617,
                   "y": 90
                 },
                 "relPosition": {
@@ -794,7 +1235,7 @@ PROGRAM Batch_Controller
             "outputHandles": [],
             "inputConnector": {
               "glbPosition": {
-                "x": 365,
+                "x": 617,
                 "y": 90
               },
               "relPosition": {
@@ -806,7 +1247,7 @@ PROGRAM Batch_Controller
               "isConnectable": false,
               "type": "target"
             },
-            "numericId": "2220285",
+            "numericId": "8943982",
             "variable": {
               "name": "Batch_State_Code",
               "class": "local",
@@ -822,14 +1263,14 @@ PROGRAM Batch_Controller
             "executionOrder": 0,
             "variant": "output",
             "block": {
-              "id": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
+              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
               "handleId": "OUT",
               "variableType": {
                 "name": "OUT",
                 "class": "output",
                 "type": {
-                  "definition": "generic-type",
-                  "value": "ANY"
+                  "definition": "base-type",
+                  "value": "INT"
                 }
               }
             },
@@ -846,37 +1287,58 @@ PROGRAM Batch_Controller
       ],
       "edges": [
         {
-          "id": "e_left-rail-rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb_CONTACT_54e0c373-18e2-4514-ad6a-0a0dfdeb10d7__left-rail_input",
-          "source": "left-rail-rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb",
-          "target": "CONTACT_54e0c373-18e2-4514-ad6a-0a0dfdeb10d7",
-          "sourceHandle": "left-rail",
-          "targetHandle": "input"
-        },
-        {
-          "id": "e_CONTACT_54e0c373-18e2-4514-ad6a-0a0dfdeb10d7_BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0__output_???",
-          "source": "CONTACT_54e0c373-18e2-4514-ad6a-0a0dfdeb10d7",
-          "target": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
+          "id": "e_CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_???",
+          "source": "CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4",
+          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
           "sourceHandle": "output",
           "targetHandle": "EN"
         },
         {
-          "id": "e_BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0_right-rail-rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb__???_right-rail",
-          "source": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
-          "target": "right-rail-rung_Batch_Controller_9f77a4ed-334a-462e-ac89-5f7b8113febb",
+          "id": "e_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61_right-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b__???_right-rail",
+          "source": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+          "target": "right-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
           "sourceHandle": "ENO",
           "targetHandle": "right-rail"
         },
         {
-          "id": "e_VARIABLE_9e987c8d-1ac4-44f2-8d46-60b756cbf452_BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0__output_IN",
-          "source": "VARIABLE_9e987c8d-1ac4-44f2-8d46-60b756cbf452",
-          "target": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
-          "sourceHandle": "output",
-          "targetHandle": "IN"
+          "id": "e_left-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b_CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd__left-rail_input",
+          "source": "left-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
+          "target": "CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd",
+          "sourceHandle": "left-rail",
+          "targetHandle": "input"
         },
         {
-          "id": "e_BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0_VARIABLE_cb214320-46a7-440e-9245-b00f5bc94711__OUT_input",
-          "source": "BLOCK_00af2467-a301-48dc-a132-9f3c75b069e0",
-          "target": "VARIABLE_cb214320-46a7-440e-9245-b00f5bc94711",
+          "id": "e_CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd_CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4__output_input",
+          "source": "CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd",
+          "target": "CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4",
+          "sourceHandle": "output",
+          "targetHandle": "input"
+        },
+        {
+          "id": "e_VARIABLE_a65e1726-75d3-479e-87da-f26a874d4a7c_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_Current_State",
+          "source": "VARIABLE_a65e1726-75d3-479e-87da-f26a874d4a7c",
+          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+          "sourceHandle": "output",
+          "targetHandle": "Current_State"
+        },
+        {
+          "id": "e_VARIABLE_feb588bf-8c6c-4445-b750-bdefaaf587b5_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_Required_State",
+          "source": "VARIABLE_feb588bf-8c6c-4445-b750-bdefaaf587b5",
+          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+          "sourceHandle": "output",
+          "targetHandle": "Required_State"
+        },
+        {
+          "id": "e_VARIABLE_b9b44e15-0d4a-4c85-810d-0aef77fd4cad_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_Next_State",
+          "source": "VARIABLE_b9b44e15-0d4a-4c85-810d-0aef77fd4cad",
+          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+          "sourceHandle": "output",
+          "targetHandle": "Next_State"
+        },
+        {
+          "id": "e_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61_VARIABLE_25dcc704-ffb9-4b46-9251-97b6f61dc3b8__OUT_input",
+          "source": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
+          "target": "VARIABLE_25dcc704-ffb9-4b46-9251-97b6f61dc3b8",
           "sourceHandle": "OUT",
           "targetHandle": "input"
         }
@@ -22508,1315 +22970,6 @@ PROGRAM Batch_Controller
           "id": "e_BLOCK_1ce3c822-d6a5-4c20-9337-f07e4b0f1e69_VARIABLE_8e6d0d7c-63db-4c38-9caa-6d0a3ad933f1__OUT_input",
           "source": "BLOCK_1ce3c822-d6a5-4c20-9337-f07e4b0f1e69",
           "target": "VARIABLE_8e6d0d7c-63db-4c38-9caa-6d0a3ad933f1",
-          "sourceHandle": "OUT",
-          "targetHandle": "input"
-        }
-      ],
-      "selectedNodes": [],
-      "handleBranches": []
-    },
-    {
-      "id": "rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
-      "comment": "Batch Reset Initailize",
-      "defaultBounds": [
-        300,
-        100
-      ],
-      "reactFlowViewport": [
-        850,
-        214
-      ],
-      "nodes": [
-        {
-          "id": "left-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
-          "type": "powerRail",
-          "position": {
-            "x": 0,
-            "y": 30
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 3,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 3,
-                  "y": 20
-                },
-                "id": "left-rail",
-                "position": "right",
-                "type": "source",
-                "isConnectable": false,
-                "style": {
-                  "top": 20,
-                  "right": -3
-                }
-              }
-            ],
-            "inputHandles": [],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 3,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 3,
-                  "y": 20
-                },
-                "id": "left-rail",
-                "position": "right",
-                "type": "source",
-                "isConnectable": false,
-                "style": {
-                  "top": 20,
-                  "right": -3
-                }
-              }
-            ],
-            "outputConnector": {
-              "glbPosition": {
-                "x": 3,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 3,
-                "y": 20
-              },
-              "id": "left-rail",
-              "position": "right",
-              "type": "source",
-              "isConnectable": false,
-              "style": {
-                "top": 20,
-                "right": -3
-              }
-            },
-            "numericId": "4358215",
-            "variant": "left",
-            "variable": {
-              "name": ""
-            },
-            "executionOrder": 0,
-            "draggable": false,
-            "selectable": false,
-            "deletable": false
-          },
-          "width": 3,
-          "height": 40,
-          "measured": {
-            "width": 3,
-            "height": 40
-          },
-          "draggable": false,
-          "selectable": false,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd",
-          "type": "contact",
-          "position": {
-            "x": 68,
-            "y": 38
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 68,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 12
-                },
-                "id": "input",
-                "position": "left",
-                "isConnectable": false,
-                "type": "target",
-                "style": {
-                  "left": -3
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 92,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 24,
-                  "y": 12
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source",
-                "style": {
-                  "right": -3
-                }
-              }
-            ],
-            "variant": "default",
-            "inputHandles": [
-              {
-                "glbPosition": {
-                  "x": 68,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 12
-                },
-                "id": "input",
-                "position": "left",
-                "isConnectable": false,
-                "type": "target",
-                "style": {
-                  "left": -3
-                }
-              }
-            ],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 92,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 24,
-                  "y": 12
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source",
-                "style": {
-                  "right": -3
-                }
-              }
-            ],
-            "inputConnector": {
-              "glbPosition": {
-                "x": 68,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 0,
-                "y": 12
-              },
-              "id": "input",
-              "position": "left",
-              "isConnectable": false,
-              "type": "target",
-              "style": {
-                "left": -3
-              }
-            },
-            "outputConnector": {
-              "glbPosition": {
-                "x": 92,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 24,
-                "y": 12
-              },
-              "id": "output",
-              "position": "right",
-              "isConnectable": false,
-              "type": "source",
-              "style": {
-                "right": -3
-              }
-            },
-            "numericId": "6442263",
-            "variable": {
-              "id": "",
-              "name": "Batch_Reset",
-              "type": {
-                "definition": "base-type",
-                "value": "BOOL"
-              },
-              "class": "local",
-              "location": "",
-              "documentation": "",
-              "debug": false
-            },
-            "executionOrder": 0,
-            "draggable": true,
-            "selectable": true,
-            "deletable": true
-          },
-          "width": 24,
-          "height": 24,
-          "measured": {
-            "width": 24,
-            "height": 24
-          },
-          "draggable": true,
-          "selectable": true,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4",
-          "type": "contact",
-          "position": {
-            "x": 182,
-            "y": 38
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 182,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 12
-                },
-                "id": "input",
-                "position": "left",
-                "isConnectable": false,
-                "type": "target",
-                "style": {
-                  "left": -3
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 206,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 24,
-                  "y": 12
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source",
-                "style": {
-                  "right": -3
-                }
-              }
-            ],
-            "variant": "default",
-            "inputHandles": [
-              {
-                "glbPosition": {
-                  "x": 182,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 12
-                },
-                "id": "input",
-                "position": "left",
-                "isConnectable": false,
-                "type": "target",
-                "style": {
-                  "left": -3
-                }
-              }
-            ],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 206,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 24,
-                  "y": 12
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source",
-                "style": {
-                  "right": -3
-                }
-              }
-            ],
-            "inputConnector": {
-              "glbPosition": {
-                "x": 182,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 0,
-                "y": 12
-              },
-              "id": "input",
-              "position": "left",
-              "isConnectable": false,
-              "type": "target",
-              "style": {
-                "left": -3
-              }
-            },
-            "outputConnector": {
-              "glbPosition": {
-                "x": 206,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 24,
-                "y": 12
-              },
-              "id": "output",
-              "position": "right",
-              "isConnectable": false,
-              "type": "source",
-              "style": {
-                "right": -3
-              }
-            },
-            "numericId": "1849988",
-            "variable": {
-              "id": "",
-              "name": "Safety_OK",
-              "type": {
-                "definition": "base-type",
-                "value": "BOOL"
-              },
-              "class": "local",
-              "location": "",
-              "documentation": "",
-              "debug": false
-            },
-            "executionOrder": 0,
-            "draggable": true,
-            "selectable": true,
-            "deletable": true
-          },
-          "width": 24,
-          "height": 24,
-          "measured": {
-            "width": 24,
-            "height": 24
-          },
-          "draggable": true,
-          "selectable": true,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "type": "block",
-          "position": {
-            "x": 371,
-            "y": 14
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 36
-                },
-                "id": "EN",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 36,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 76
-                },
-                "id": "Current_State",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 76,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 130
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 116
-                },
-                "id": "Required_State",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 116,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 170
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 156
-                },
-                "id": "Next_State",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 156,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 587,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 216,
-                  "y": 36
-                },
-                "id": "ENO",
-                "position": "right",
-                "type": "source",
-                "isConnectable": false,
-                "style": {
-                  "top": 36,
-                  "right": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 587,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 216,
-                  "y": 76
-                },
-                "id": "OUT",
-                "position": "right",
-                "type": "source",
-                "isConnectable": false,
-                "style": {
-                  "top": 76,
-                  "right": 0
-                }
-              }
-            ],
-            "inputHandles": [
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 36
-                },
-                "id": "EN",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 36,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 76
-                },
-                "id": "Current_State",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 76,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 130
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 116
-                },
-                "id": "Required_State",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 116,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 371,
-                  "y": 170
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 156
-                },
-                "id": "Next_State",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 156,
-                  "left": 0
-                }
-              }
-            ],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 587,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 216,
-                  "y": 36
-                },
-                "id": "ENO",
-                "position": "right",
-                "type": "source",
-                "isConnectable": false,
-                "style": {
-                  "top": 36,
-                  "right": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 587,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 216,
-                  "y": 76
-                },
-                "id": "OUT",
-                "position": "right",
-                "type": "source",
-                "isConnectable": false,
-                "style": {
-                  "top": 76,
-                  "right": 0
-                }
-              }
-            ],
-            "inputConnector": {
-              "glbPosition": {
-                "x": 371,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 0,
-                "y": 36
-              },
-              "id": "EN",
-              "position": "left",
-              "type": "target",
-              "isConnectable": false,
-              "style": {
-                "top": 36,
-                "left": 0
-              }
-            },
-            "outputConnector": {
-              "glbPosition": {
-                "x": 587,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 216,
-                "y": 36
-              },
-              "id": "ENO",
-              "position": "right",
-              "type": "source",
-              "isConnectable": false,
-              "style": {
-                "top": 36,
-                "right": 0
-              }
-            },
-            "numericId": "9564944",
-            "variant": {
-              "name": "State_Transition",
-              "type": "function",
-              "variables": [
-                {
-                  "name": "EN",
-                  "class": "input",
-                  "type": {
-                    "definition": "generic-type",
-                    "value": "BOOL"
-                  }
-                },
-                {
-                  "name": "ENO",
-                  "class": "output",
-                  "type": {
-                    "definition": "generic-type",
-                    "value": "BOOL"
-                  }
-                },
-                {
-                  "name": "OUT",
-                  "class": "output",
-                  "type": {
-                    "definition": "base-type",
-                    "value": "INT"
-                  }
-                },
-                {
-                  "name": "Current_State",
-                  "class": "input",
-                  "type": {
-                    "definition": "base-type",
-                    "value": "INT"
-                  }
-                },
-                {
-                  "name": "Required_State",
-                  "class": "input",
-                  "type": {
-                    "definition": "base-type",
-                    "value": "INT"
-                  }
-                },
-                {
-                  "name": "Next_State",
-                  "class": "input",
-                  "type": {
-                    "definition": "base-type",
-                    "value": "INT"
-                  }
-                }
-              ],
-              "documentation": "",
-              "extensible": false
-            },
-            "variable": {
-              "name": ""
-            },
-            "executionOrder": 0,
-            "executionControl": true,
-            "lockExecutionControl": true,
-            "connectedVariables": [
-              {
-                "handleId": "Current_State",
-                "type": "input",
-                "variable": {
-                  "name": "Batch_State_Code",
-                  "class": "local",
-                  "type": {
-                    "definition": "base-type",
-                    "value": "INT"
-                  },
-                  "location": "",
-                  "initialValue": null,
-                  "documentation": "",
-                  "debug": false
-                }
-              },
-              {
-                "handleId": "Required_State",
-                "type": "input",
-                "variable": {
-                  "name": "6"
-                }
-              },
-              {
-                "handleId": "Next_State",
-                "type": "input",
-                "variable": {
-                  "name": "0"
-                }
-              },
-              {
-                "handleId": "OUT",
-                "type": "output",
-                "variable": {
-                  "name": "Batch_State_Code",
-                  "class": "local",
-                  "type": {
-                    "definition": "base-type",
-                    "value": "INT"
-                  },
-                  "location": "",
-                  "initialValue": null,
-                  "documentation": "",
-                  "debug": false
-                }
-              }
-            ],
-            "draggable": true,
-            "selectable": true,
-            "deletable": true
-          },
-          "width": 216,
-          "height": 180,
-          "measured": {
-            "width": 216,
-            "height": 180
-          },
-          "draggable": true,
-          "selectable": true,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "right-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
-          "type": "powerRail",
-          "position": {
-            "x": 847,
-            "y": 30
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 297,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 3,
-                  "y": 20
-                },
-                "id": "right-rail",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 20,
-                  "left": -3
-                },
-                "x": 847
-              }
-            ],
-            "inputHandles": [
-              {
-                "glbPosition": {
-                  "x": 297,
-                  "y": 50
-                },
-                "relPosition": {
-                  "x": 3,
-                  "y": 20
-                },
-                "id": "right-rail",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 20,
-                  "left": -3
-                }
-              }
-            ],
-            "outputHandles": [],
-            "inputConnector": {
-              "glbPosition": {
-                "x": 297,
-                "y": 50
-              },
-              "relPosition": {
-                "x": 3,
-                "y": 20
-              },
-              "id": "right-rail",
-              "position": "left",
-              "type": "target",
-              "isConnectable": false,
-              "style": {
-                "top": 20,
-                "left": -3
-              }
-            },
-            "numericId": "9211609",
-            "variant": "right",
-            "variable": {
-              "name": ""
-            },
-            "executionOrder": 0,
-            "draggable": false,
-            "selectable": false,
-            "deletable": false
-          },
-          "width": 3,
-          "height": 40,
-          "measured": {
-            "width": 3,
-            "height": 40
-          },
-          "draggable": false,
-          "selectable": false,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "VARIABLE_a65e1726-75d3-479e-87da-f26a874d4a7c",
-          "type": "variable",
-          "position": {
-            "x": 261,
-            "y": 74
-          },
-          "width": 80,
-          "height": 32,
-          "measured": {
-            "width": 80,
-            "height": 32
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 421,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "inputHandles": [],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 421,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "outputConnector": {
-              "glbPosition": {
-                "x": 421,
-                "y": 90
-              },
-              "relPosition": {
-                "x": 80,
-                "y": 16
-              },
-              "id": "output",
-              "position": "right",
-              "isConnectable": false,
-              "type": "source"
-            },
-            "numericId": "7313437",
-            "variable": {
-              "name": "Batch_State_Code",
-              "class": "local",
-              "type": {
-                "definition": "base-type",
-                "value": "INT"
-              },
-              "location": "",
-              "initialValue": null,
-              "documentation": "",
-              "debug": false
-            },
-            "executionOrder": 0,
-            "variant": "input",
-            "block": {
-              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-              "handleId": "Current_State",
-              "variableType": {
-                "name": "Current_State",
-                "class": "input",
-                "type": {
-                  "definition": "base-type",
-                  "value": "INT"
-                }
-              }
-            },
-            "draggable": false,
-            "selectable": true,
-            "deletable": false
-          },
-          "deletable": false,
-          "selectable": true,
-          "draggable": false,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "VARIABLE_feb588bf-8c6c-4445-b750-bdefaaf587b5",
-          "type": "variable",
-          "position": {
-            "x": 261,
-            "y": 114
-          },
-          "width": 80,
-          "height": 32,
-          "measured": {
-            "width": 80,
-            "height": 32
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 421,
-                  "y": 130
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "inputHandles": [],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 421,
-                  "y": 130
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "outputConnector": {
-              "glbPosition": {
-                "x": 421,
-                "y": 130
-              },
-              "relPosition": {
-                "x": 80,
-                "y": 16
-              },
-              "id": "output",
-              "position": "right",
-              "isConnectable": false,
-              "type": "source"
-            },
-            "numericId": "7660962",
-            "variable": {
-              "name": "6"
-            },
-            "executionOrder": 0,
-            "variant": "input",
-            "block": {
-              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-              "handleId": "Required_State",
-              "variableType": {
-                "name": "Required_State",
-                "class": "input",
-                "type": {
-                  "definition": "base-type",
-                  "value": "INT"
-                }
-              }
-            },
-            "draggable": false,
-            "selectable": true,
-            "deletable": false
-          },
-          "deletable": false,
-          "selectable": true,
-          "draggable": false,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "VARIABLE_b9b44e15-0d4a-4c85-810d-0aef77fd4cad",
-          "type": "variable",
-          "position": {
-            "x": 261,
-            "y": 154
-          },
-          "width": 80,
-          "height": 32,
-          "measured": {
-            "width": 80,
-            "height": 32
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 421,
-                  "y": 170
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "inputHandles": [],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 421,
-                  "y": 170
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "outputConnector": {
-              "glbPosition": {
-                "x": 421,
-                "y": 170
-              },
-              "relPosition": {
-                "x": 80,
-                "y": 16
-              },
-              "id": "output",
-              "position": "right",
-              "isConnectable": false,
-              "type": "source"
-            },
-            "numericId": "8839569",
-            "variable": {
-              "name": "0"
-            },
-            "executionOrder": 0,
-            "variant": "input",
-            "block": {
-              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-              "handleId": "Next_State",
-              "variableType": {
-                "name": "Next_State",
-                "class": "input",
-                "type": {
-                  "definition": "base-type",
-                  "value": "INT"
-                }
-              }
-            },
-            "draggable": false,
-            "selectable": true,
-            "deletable": false
-          },
-          "deletable": false,
-          "selectable": true,
-          "draggable": false,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "VARIABLE_25dcc704-ffb9-4b46-9251-97b6f61dc3b8",
-          "type": "variable",
-          "position": {
-            "x": 617,
-            "y": 74
-          },
-          "width": 80,
-          "height": 32,
-          "measured": {
-            "width": 80,
-            "height": 32
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 617,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 16
-                },
-                "id": "input",
-                "position": "left",
-                "isConnectable": false,
-                "type": "target"
-              }
-            ],
-            "inputHandles": [
-              {
-                "glbPosition": {
-                  "x": 617,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 16
-                },
-                "id": "input",
-                "position": "left",
-                "isConnectable": false,
-                "type": "target"
-              }
-            ],
-            "outputHandles": [],
-            "inputConnector": {
-              "glbPosition": {
-                "x": 617,
-                "y": 90
-              },
-              "relPosition": {
-                "x": 0,
-                "y": 16
-              },
-              "id": "input",
-              "position": "left",
-              "isConnectable": false,
-              "type": "target"
-            },
-            "numericId": "8943982",
-            "variable": {
-              "name": "Batch_State_Code",
-              "class": "local",
-              "type": {
-                "definition": "base-type",
-                "value": "INT"
-              },
-              "location": "",
-              "initialValue": null,
-              "documentation": "",
-              "debug": false
-            },
-            "executionOrder": 0,
-            "variant": "output",
-            "block": {
-              "id": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-              "handleId": "OUT",
-              "variableType": {
-                "name": "OUT",
-                "class": "output",
-                "type": {
-                  "definition": "base-type",
-                  "value": "INT"
-                }
-              }
-            },
-            "draggable": false,
-            "selectable": true,
-            "deletable": false
-          },
-          "deletable": false,
-          "selectable": true,
-          "draggable": false,
-          "selected": false,
-          "dragging": false
-        }
-      ],
-      "edges": [
-        {
-          "id": "e_CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_???",
-          "source": "CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4",
-          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "sourceHandle": "output",
-          "targetHandle": "EN"
-        },
-        {
-          "id": "e_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61_right-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b__???_right-rail",
-          "source": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "target": "right-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
-          "sourceHandle": "ENO",
-          "targetHandle": "right-rail"
-        },
-        {
-          "id": "e_left-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b_CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd__left-rail_input",
-          "source": "left-rail-rung_Batch_Controller_2fbd3c34-4d88-4b7e-9fe3-a4591b09f67b",
-          "target": "CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd",
-          "sourceHandle": "left-rail",
-          "targetHandle": "input"
-        },
-        {
-          "id": "e_CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd_CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4__output_input",
-          "source": "CONTACT_c3791074-93e5-4971-8d69-f8b451a575bd",
-          "target": "CONTACT_c9bf8553-e57a-41ed-bc99-24e3888cb8b4",
-          "sourceHandle": "output",
-          "targetHandle": "input"
-        },
-        {
-          "id": "e_VARIABLE_a65e1726-75d3-479e-87da-f26a874d4a7c_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_Current_State",
-          "source": "VARIABLE_a65e1726-75d3-479e-87da-f26a874d4a7c",
-          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "sourceHandle": "output",
-          "targetHandle": "Current_State"
-        },
-        {
-          "id": "e_VARIABLE_feb588bf-8c6c-4445-b750-bdefaaf587b5_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_Required_State",
-          "source": "VARIABLE_feb588bf-8c6c-4445-b750-bdefaaf587b5",
-          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "sourceHandle": "output",
-          "targetHandle": "Required_State"
-        },
-        {
-          "id": "e_VARIABLE_b9b44e15-0d4a-4c85-810d-0aef77fd4cad_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61__output_Next_State",
-          "source": "VARIABLE_b9b44e15-0d4a-4c85-810d-0aef77fd4cad",
-          "target": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "sourceHandle": "output",
-          "targetHandle": "Next_State"
-        },
-        {
-          "id": "e_BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61_VARIABLE_25dcc704-ffb9-4b46-9251-97b6f61dc3b8__OUT_input",
-          "source": "BLOCK_a8485118-b24e-4b9a-9383-04dd47f01a61",
-          "target": "VARIABLE_25dcc704-ffb9-4b46-9251-97b6f61dc3b8",
           "sourceHandle": "OUT",
           "targetHandle": "input"
         }

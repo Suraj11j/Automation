@@ -4370,13 +4370,6 @@ PROGRAM Conveyor_Controller
                 }
               },
               {
-                "handleId": "PT",
-                "type": "input",
-                "variable": {
-                  "name": "5"
-                }
-              },
-              {
                 "handleId": "Q",
                 "type": "output",
                 "variable": {
@@ -4390,6 +4383,13 @@ PROGRAM Conveyor_Controller
                   "initialValue": null,
                   "documentation": "",
                   "debug": false
+                }
+              },
+              {
+                "handleId": "PT",
+                "type": "input",
+                "variable": {
+                  "name": "T#5s"
                 }
               }
             ],
@@ -4649,7 +4649,7 @@ PROGRAM Conveyor_Controller
             },
             "numericId": "7464153",
             "variable": {
-              "name": "5"
+              "name": "T#5s"
             },
             "executionOrder": 0,
             "variant": "input",

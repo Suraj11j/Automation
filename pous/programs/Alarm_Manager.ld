@@ -22708,7 +22708,7 @@ PROGRAM Alarm_Manager
             "numericId": "675829",
             "variable": {
               "id": "",
-              "name": "Ingredient_A_Valve_Fault",
+              "name": "Ingredient_A_Valve_Alarm.Acknowledged",
               "type": {
                 "definition": "base-type",
                 "value": "BOOL"
@@ -23100,7 +23100,7 @@ PROGRAM Alarm_Manager
             "numericId": "3583727",
             "variable": {
               "id": "",
-              "name": "Ingredient_B_Valve_Fault",
+              "name": "Ingredient_B_Valve_Alarm.Acknowledged",
               "type": {
                 "definition": "base-type",
                 "value": "BOOL"
@@ -35487,7 +35487,7 @@ PROGRAM Alarm_Manager
             "numericId": "3469653",
             "variable": {
               "id": "",
-              "name": "Temperature_Alarm.Active",
+              "name": "Temperature_Alarm.Acknowledged",
               "type": {
                 "definition": "base-type",
                 "value": "BOOL"
