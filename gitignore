@@ -1,0 +1,21 @@
+# CODESYS generated/compiled output - never commit these
+*.compileinfo
+*.bootinfo
+*.bootinfo_guids
+*.precompilecache
+*.guard
+*.dep
+
+# Simulation runtime files
+*_simulation.*
+
+# User-specific IDE settings (each teammate keeps their own)
+*-*.opt
+
+# Shared project settings (commit this one)
+# *-AllUsers.opt  <-- intentionally NOT ignored
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
