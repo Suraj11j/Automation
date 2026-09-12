@@ -89,8 +89,8 @@ void Program_ALARM_MANAGER::run() {
     } else {
         _TMP_GE3254488_ENO = false;
     }
-    if (_TMP_GE3254488_ENO) {
-        TEMPERATURE_ALARM.ACTIVE = _TMP_GE3254488_OUT;
+    if (_TMP_GE3254488_OUT) {
+        TEMPERATURE_ALARM.ACTIVE = true;
     }
     if (true) {
         _TMP_EQ8926932_OUT = EQ(BATCH_STATE_CODE->read(), static_cast<IEC_INT>(7));

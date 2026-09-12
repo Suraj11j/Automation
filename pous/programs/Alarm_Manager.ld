@@ -6516,16 +6516,7 @@ PROGRAM Alarm_Manager
             },
             "numericId": "3171674",
             "variable": {
-              "id": "",
-              "name": "Pump_B_Alarm.Latched",
-              "type": {
-                "definition": "base-type",
-                "value": "BOOL"
-              },
-              "class": "local",
-              "location": "",
-              "documentation": "",
-              "debug": false
+              "name": "Ingredient_B_Valve_Alarm.Latched"
             },
             "executionOrder": 0,
             "draggable": true,
@@ -7999,8 +7990,8 @@ PROGRAM Alarm_Manager
         100
       ],
       "reactFlowViewport": [
-        496,
-        174
+        539,
+        214
       ],
       "selectedNodes": [],
       "nodes": [
@@ -8122,36 +8113,36 @@ PROGRAM Alarm_Manager
               {
                 "glbPosition": {
                   "x": 143,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 76
-                },
-                "id": "IN1",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 76,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 143,
                   "y": 130
                 },
                 "relPosition": {
                   "x": 0,
                   "y": 116
                 },
-                "id": "IN2",
+                "id": "IN1",
                 "position": "left",
                 "type": "target",
                 "isConnectable": false,
                 "style": {
                   "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 143,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 156
+                },
+                "id": "IN2",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 156,
                   "left": 0
                 }
               },
@@ -8176,18 +8167,18 @@ PROGRAM Alarm_Manager
               {
                 "glbPosition": {
                   "x": 233,
-                  "y": 90
+                  "y": 130
                 },
                 "relPosition": {
                   "x": 90,
-                  "y": 76
+                  "y": 116
                 },
                 "id": "OUT",
                 "position": "right",
                 "type": "source",
                 "isConnectable": false,
                 "style": {
-                  "top": 76,
+                  "top": 116,
                   "right": 0
                 }
               }
@@ -8214,36 +8205,36 @@ PROGRAM Alarm_Manager
               {
                 "glbPosition": {
                   "x": 143,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 0,
-                  "y": 76
-                },
-                "id": "IN1",
-                "position": "left",
-                "type": "target",
-                "isConnectable": false,
-                "style": {
-                  "top": 76,
-                  "left": 0
-                }
-              },
-              {
-                "glbPosition": {
-                  "x": 143,
                   "y": 130
                 },
                 "relPosition": {
                   "x": 0,
                   "y": 116
                 },
-                "id": "IN2",
+                "id": "IN1",
                 "position": "left",
                 "type": "target",
                 "isConnectable": false,
                 "style": {
                   "top": 116,
+                  "left": 0
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 143,
+                  "y": 170
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 156
+                },
+                "id": "IN2",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 156,
                   "left": 0
                 }
               }
@@ -8270,18 +8261,18 @@ PROGRAM Alarm_Manager
               {
                 "glbPosition": {
                   "x": 233,
-                  "y": 90
+                  "y": 130
                 },
                 "relPosition": {
                   "x": 90,
-                  "y": 76
+                  "y": 116
                 },
                 "id": "OUT",
                 "position": "right",
                 "type": "source",
                 "isConnectable": false,
                 "style": {
-                  "top": 76,
+                  "top": 116,
                   "right": 0
                 }
               }
@@ -8417,10 +8408,161 @@ PROGRAM Alarm_Manager
             "deletable": true
           },
           "width": 90,
-          "height": 140,
+          "height": 180,
           "measured": {
             "width": 90,
-            "height": 140
+            "height": 180
+          },
+          "draggable": true,
+          "selectable": true,
+          "selected": false,
+          "dragging": false
+        },
+        {
+          "id": "COIL_0a0ddb44-c04f-4210-af36-786a615d5232",
+          "type": "coil",
+          "position": {
+            "x": 398,
+            "y": 118
+          },
+          "data": {
+            "handles": [
+              {
+                "glbPosition": {
+                  "x": 398,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              },
+              {
+                "glbPosition": {
+                  "x": 426,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 28,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "variant": "set",
+            "inputHandles": [
+              {
+                "glbPosition": {
+                  "x": 398,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 0,
+                  "y": 12
+                },
+                "id": "input",
+                "position": "left",
+                "isConnectable": false,
+                "type": "target",
+                "style": {
+                  "left": -3
+                }
+              }
+            ],
+            "outputHandles": [
+              {
+                "glbPosition": {
+                  "x": 426,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 28,
+                  "y": 12
+                },
+                "id": "output",
+                "position": "right",
+                "isConnectable": false,
+                "type": "source",
+                "style": {
+                  "right": -3
+                }
+              }
+            ],
+            "inputConnector": {
+              "glbPosition": {
+                "x": 398,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 12
+              },
+              "id": "input",
+              "position": "left",
+              "isConnectable": false,
+              "type": "target",
+              "style": {
+                "left": -3
+              }
+            },
+            "outputConnector": {
+              "glbPosition": {
+                "x": 426,
+                "y": 130
+              },
+              "relPosition": {
+                "x": 28,
+                "y": 12
+              },
+              "id": "output",
+              "position": "right",
+              "isConnectable": false,
+              "type": "source",
+              "style": {
+                "right": -3
+              }
+            },
+            "numericId": "2861321",
+            "variable": {
+              "id": "",
+              "name": "Temperature_Alarm.Active",
+              "type": {
+                "definition": "base-type",
+                "value": "BOOL"
+              },
+              "class": "local",
+              "location": "",
+              "documentation": "",
+              "debug": false
+            },
+            "executionOrder": 0,
+            "draggable": true,
+            "selectable": true,
+            "deletable": true,
+            "branchContext": {
+              "blockId": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
+              "handleId": "OUT",
+              "direction": "output"
+            }
+          },
+          "width": 28,
+          "height": 24,
+          "measured": {
+            "width": 28,
+            "height": 24
           },
           "draggable": true,
           "selectable": true,
@@ -8431,7 +8573,7 @@ PROGRAM Alarm_Manager
           "id": "right-rail-rung_Alarm_Manager_cc472801-e39b-4bb5-9297-795bd2692ce3",
           "type": "powerRail",
           "position": {
-            "x": 493,
+            "x": 536,
             "y": 30
           },
           "data": {
@@ -8453,7 +8595,26 @@ PROGRAM Alarm_Manager
                   "top": 20,
                   "left": -3
                 },
-                "x": 493
+                "x": 536
+              },
+              {
+                "glbPosition": {
+                  "x": 297,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323_OUT",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "left": -3
+                },
+                "x": 536
               }
             ],
             "inputHandles": [
@@ -8474,7 +8635,25 @@ PROGRAM Alarm_Manager
                   "top": 20,
                   "left": -3
                 },
-                "x": 438
+                "x": 493
+              },
+              {
+                "glbPosition": {
+                  "x": 297,
+                  "y": 130
+                },
+                "relPosition": {
+                  "x": 3,
+                  "y": 100
+                },
+                "id": "branch_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323_OUT",
+                "position": "left",
+                "type": "target",
+                "isConnectable": false,
+                "style": {
+                  "top": 100,
+                  "left": -3
+                }
               }
             ],
             "outputHandles": [],
@@ -8518,105 +8697,7 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
-          "id": "VARIABLE_87a066b9-dfa3-4a38-9390-a95c8dadb0f0",
-          "type": "variable",
-          "position": {
-            "x": 33,
-            "y": 74
-          },
-          "width": 80,
-          "height": 32,
-          "measured": {
-            "width": 80,
-            "height": 32
-          },
-          "data": {
-            "handles": [
-              {
-                "glbPosition": {
-                  "x": 193,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "inputHandles": [],
-            "outputHandles": [
-              {
-                "glbPosition": {
-                  "x": 193,
-                  "y": 90
-                },
-                "relPosition": {
-                  "x": 80,
-                  "y": 16
-                },
-                "id": "output",
-                "position": "right",
-                "isConnectable": false,
-                "type": "source"
-              }
-            ],
-            "outputConnector": {
-              "glbPosition": {
-                "x": 193,
-                "y": 90
-              },
-              "relPosition": {
-                "x": 80,
-                "y": 16
-              },
-              "id": "output",
-              "position": "right",
-              "isConnectable": false,
-              "type": "source"
-            },
-            "numericId": "7860884",
-            "variable": {
-              "name": "Temperature",
-              "class": "external",
-              "type": {
-                "definition": "base-type",
-                "value": "REAL"
-              },
-              "location": "",
-              "initialValue": null,
-              "documentation": "",
-              "debug": false
-            },
-            "executionOrder": 0,
-            "variant": "input",
-            "block": {
-              "id": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
-              "handleId": "IN1",
-              "variableType": {
-                "name": "IN1",
-                "class": "input",
-                "type": {
-                  "definition": "generic-type",
-                  "value": "ANY_ELEMENTARY"
-                }
-              }
-            },
-            "draggable": false,
-            "selectable": true,
-            "deletable": false
-          },
-          "deletable": false,
-          "selectable": true,
-          "draggable": false,
-          "selected": false,
-          "dragging": false
-        },
-        {
-          "id": "VARIABLE_4a0729d3-00c4-4a45-a855-e205825b7644",
+          "id": "VARIABLE_2d7403ec-04ea-4343-9ec0-c09214c95cfc",
           "type": "variable",
           "position": {
             "x": 33,
@@ -8676,17 +8757,26 @@ PROGRAM Alarm_Manager
               "isConnectable": false,
               "type": "source"
             },
-            "numericId": "4270753",
+            "numericId": "10303438",
             "variable": {
-              "name": "Batch.Temperature_SP"
+              "name": "Temperature",
+              "class": "external",
+              "type": {
+                "definition": "base-type",
+                "value": "REAL"
+              },
+              "location": "",
+              "initialValue": null,
+              "documentation": "",
+              "debug": false
             },
             "executionOrder": 0,
             "variant": "input",
             "block": {
               "id": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
-              "handleId": "IN2",
+              "handleId": "IN1",
               "variableType": {
-                "name": "IN2",
+                "name": "IN1",
                 "class": "input",
                 "type": {
                   "definition": "generic-type",
@@ -8705,11 +8795,11 @@ PROGRAM Alarm_Manager
           "dragging": false
         },
         {
-          "id": "VARIABLE_ed94ba86-0aa0-4bbc-afba-ee66e9ba087e",
+          "id": "VARIABLE_d6809bef-0ee7-4197-af32-8e0e5ebce078",
           "type": "variable",
           "position": {
-            "x": 263,
-            "y": 74
+            "x": 33,
+            "y": 154
           },
           "width": 80,
           "height": 32,
@@ -8721,65 +8811,65 @@ PROGRAM Alarm_Manager
             "handles": [
               {
                 "glbPosition": {
-                  "x": 263,
-                  "y": 90
+                  "x": 193,
+                  "y": 170
                 },
                 "relPosition": {
-                  "x": 0,
+                  "x": 80,
                   "y": 16
                 },
-                "id": "input",
-                "position": "left",
+                "id": "output",
+                "position": "right",
                 "isConnectable": false,
-                "type": "target"
+                "type": "source"
               }
             ],
-            "inputHandles": [
+            "inputHandles": [],
+            "outputHandles": [
               {
                 "glbPosition": {
-                  "x": 263,
-                  "y": 90
+                  "x": 193,
+                  "y": 170
                 },
                 "relPosition": {
-                  "x": 0,
+                  "x": 80,
                   "y": 16
                 },
-                "id": "input",
-                "position": "left",
+                "id": "output",
+                "position": "right",
                 "isConnectable": false,
-                "type": "target"
+                "type": "source"
               }
             ],
-            "outputHandles": [],
-            "inputConnector": {
+            "outputConnector": {
               "glbPosition": {
-                "x": 263,
-                "y": 90
+                "x": 193,
+                "y": 170
               },
               "relPosition": {
-                "x": 0,
+                "x": 80,
                 "y": 16
               },
-              "id": "input",
-              "position": "left",
+              "id": "output",
+              "position": "right",
               "isConnectable": false,
-              "type": "target"
+              "type": "source"
             },
-            "numericId": "3202814",
+            "numericId": "7414863",
             "variable": {
-              "name": "Temperature_Alarm.Active"
+              "name": "Batch.Temperature_SP"
             },
             "executionOrder": 0,
-            "variant": "output",
+            "variant": "input",
             "block": {
               "id": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
-              "handleId": "OUT",
+              "handleId": "IN2",
               "variableType": {
-                "name": "OUT",
-                "class": "output",
+                "name": "IN2",
+                "class": "input",
                 "type": {
-                  "definition": "base-type",
-                  "value": "BOOL"
+                  "definition": "generic-type",
+                  "value": "ANY_ELEMENTARY"
                 }
               }
             },
@@ -8810,28 +8900,44 @@ PROGRAM Alarm_Manager
           "targetHandle": "right-rail"
         },
         {
-          "id": "e_VARIABLE_87a066b9-dfa3-4a38-9390-a95c8dadb0f0_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323__output_IN1",
-          "source": "VARIABLE_87a066b9-dfa3-4a38-9390-a95c8dadb0f0",
+          "id": "e_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323_COIL_0a0ddb44-c04f-4210-af36-786a615d5232__OUT_input",
+          "source": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
+          "target": "COIL_0a0ddb44-c04f-4210-af36-786a615d5232",
+          "sourceHandle": "OUT",
+          "targetHandle": "input"
+        },
+        {
+          "id": "e_COIL_0a0ddb44-c04f-4210-af36-786a615d5232_right-rail-rung_Alarm_Manager_cc472801-e39b-4bb5-9297-795bd2692ce3__output_branch_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323_OUT",
+          "source": "COIL_0a0ddb44-c04f-4210-af36-786a615d5232",
+          "target": "right-rail-rung_Alarm_Manager_cc472801-e39b-4bb5-9297-795bd2692ce3",
+          "sourceHandle": "output",
+          "targetHandle": "branch_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323_OUT"
+        },
+        {
+          "id": "e_VARIABLE_2d7403ec-04ea-4343-9ec0-c09214c95cfc_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323__output_IN1",
+          "source": "VARIABLE_2d7403ec-04ea-4343-9ec0-c09214c95cfc",
           "target": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
           "sourceHandle": "output",
           "targetHandle": "IN1"
         },
         {
-          "id": "e_VARIABLE_4a0729d3-00c4-4a45-a855-e205825b7644_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323__output_IN2",
-          "source": "VARIABLE_4a0729d3-00c4-4a45-a855-e205825b7644",
+          "id": "e_VARIABLE_d6809bef-0ee7-4197-af32-8e0e5ebce078_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323__output_IN2",
+          "source": "VARIABLE_d6809bef-0ee7-4197-af32-8e0e5ebce078",
           "target": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
           "sourceHandle": "output",
           "targetHandle": "IN2"
-        },
-        {
-          "id": "e_BLOCK_07375f77-3356-49d2-98bd-bd1a64983323_VARIABLE_ed94ba86-0aa0-4bbc-afba-ee66e9ba087e__OUT_input",
-          "source": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
-          "target": "VARIABLE_ed94ba86-0aa0-4bbc-afba-ee66e9ba087e",
-          "sourceHandle": "OUT",
-          "targetHandle": "input"
         }
       ],
-      "handleBranches": []
+      "handleBranches": [
+        {
+          "blockId": "BLOCK_07375f77-3356-49d2-98bd-bd1a64983323",
+          "handleId": "OUT",
+          "direction": "output",
+          "nodeIds": [
+            "COIL_0a0ddb44-c04f-4210-af36-786a615d5232"
+          ]
+        }
+      ]
     },
     {
       "id": "rung_Alarm_Manager_e2352d4e-8535-4f20-b6d3-c34616c9bb47",
