@@ -5,6 +5,7 @@
 *.precompilecache
 *.guard
 *.dep
+*.~u
 
 # Simulation runtime files
 *_simulation.*
