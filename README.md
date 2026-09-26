@@ -1,6 +1,6 @@
 # BatchProcessingPlant — CODESYS PLC Project
 
-Batch processing plant automation built in CODESYS V3. Controls
+Batch processing plant automation built in CODESYS V3.5 Controls
 ingredient filling, mixing, discharge, and packaging via a state
 machine sequencer, with equipment interlocks, fault handling, a
 compacting alarm display, and a working Visu HMI.
@@ -33,8 +33,6 @@ CODESYS temp files (`*.~u`) are excluded — see **Team workflow**.
 | Programs | `Safety_Manager`, `Analog_Manager`, `Conveyor_Controller`, `Equipment_Controller`, `Batch_Controller`, `Alarm_Manager` | Ladder (LD) |
 | Programs | `HMI_Manager`, `Alarm_Display` | ST |
 | Global vars | `Global_Vars` (GVL) | — |
-
-`main` is a placeholder, not yet built out.
 
 ## Task configuration
 
@@ -114,16 +112,3 @@ Equipment_Controller: make FB calls unconditional
 Alarm_Manager: add 14 FB_Alarm instances with codes/messages
 Batch_Controller: add per-state TON timeouts
 ```
-
-## Known gaps / next tasks
-
-- [ ] Per-state timeouts in `Batch_Controller` — a stuck valve/pump
-      currently hangs a state forever with no fault raised
-- [ ] Physical I/O mapping — all `*_Fault_In`, `Entry_Sensor`,
-      `Exit_Sensor`, and `Raw_*` analog channels are placeholders
-- [ ] Analog sensor fault/disconnection detection in `Analog_Manager`
-- [ ] `System_Reset` button on the HMI (only `Batch_Reset` is wired —
-      `System_Reset` separately clears latched motor/pump/valve faults)
-- [ ] `Limit_Value` bounds-checking on `Batch.Ingredient_A/B`/
-      `Target_Level` before a batch starts — function exists, unused
-- [ ] `main` — top-level coordinator, not yet built
